@@ -1,0 +1,42 @@
+<Top>: 
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 0,0,0,1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        size: root.size
+        Image:
+            source: "img/top.jpg"
+            size_hint: (1,0.2)
+            pos_hint: {"x":0, "y": 0.65}
+
+        Label:
+            text: root.text
+            font_size: 40
+            pos_hint: {"x": 0.01, "y": 0.4}
+            size_hint: (1,0.2)
+            color: "white"
+
+        Button:
+            text: 'スタート'
+            background_color: "blue"
+            size_hint: (0.7,0.2)
+            pos_hint: {"x":0.144, "y": 0.2}
+            color: "white"
+            font_size: 50
+            background_normal: ""
+            on_press: root.callback()
+
+<Screen_One>:
+    name: 'screen_one'
+    Button:
+        background_color: 1,0,0,1
+        text: '画面1(のボタン)'
+ 
+<Screen_Two>:
+    name: 'screen_two'
+    Button:
+        background_color: 0,0,1,1
+        text: '画面2(のボタン)'
